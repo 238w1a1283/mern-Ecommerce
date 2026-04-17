@@ -20,7 +20,7 @@ const userSchema=mongoose.Schema({
     role:{
         type:String,
         enum:["user","admin"],
-        defaule:"user"
+        default:"user"
     }
 },{timestamps:true})
 

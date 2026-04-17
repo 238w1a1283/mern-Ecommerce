@@ -19,9 +19,11 @@ const protect=((req,res,next)=>{
 
 
 const authorize=(req,res,next)=>{
+    console.log(req.user)
     if(req.user.role!="admin"){
         return res.status(401).json({message:"Unauthorized"})
     }
+    next()
 }
 
 module.exports={protect,authorize}
